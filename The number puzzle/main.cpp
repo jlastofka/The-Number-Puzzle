@@ -1,20 +1,13 @@
 // The Number Puzzle
-// 2 Nov 2018
+// 3 Nov 2018
 
-#include <iostream>  //cout
-#include <iomanip>   //setw(6)
-//#include <cstdlib>   //?
-//#include <math.h>    //floor()
-//#include <string>    //strings
-//#include <ctime>     // time
-//#include <fstream>  // files
+#include <iostream>
+#include <iomanip>
 
-//using namespace std;
 using std::cout;
 using std::endl;
 using std::setw;
 using std::string;
-
 
 int load[5][7]={{76438, 52998, 28666, 10570, 11045, 13902, 12655},  \
                 {48195, 3200, 63312, 70206, 64304, 76615, 57821},   \
@@ -32,7 +25,7 @@ void printArray(int size, int array[])      // prints an array
 }
 
 
-int _5sum(int array[])
+int _5sum(int array[])      // sums 5 element array
 {
     int sum=0;
     for(int i=0;i<=4;i++)
@@ -42,7 +35,7 @@ int _5sum(int array[])
     return(sum);
 }
 
-int _2sum(int array[])
+int _2sum(int array[])      // sums 2 array elements
 {
     int sum=0;
     sum+=array[1];
@@ -51,7 +44,7 @@ int _2sum(int array[])
     return(sum);
 }
 
-int digitSumMax;
+int digitSumMax=0;      // holds the largest Puzzle Score
 
 int main()
 {
@@ -130,7 +123,6 @@ int main()
                                                         digitSum+=_2sum(source[m][n]);
                                                         digitSum+=_2sum(source[q][r]);
                                                         cout<<digitSum<<endl<<endl;
-                                                        //if(digitSum>digitSumMax)digitSumMax=digitSum;
                                                         digitSumMax=(digitSum>digitSumMax)? digitSum:digitSumMax;
                                                     }
                                                 }
