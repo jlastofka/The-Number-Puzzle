@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1541204049 source:c:\users\jeff\desktop\c projects\the number puzzle\main.cpp
+	<iostream>
+	<iomanip>
+
